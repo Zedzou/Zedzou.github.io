@@ -418,6 +418,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2020/02/11/Setting-the-airsim/" rel="prev" title="Setting the airsim">
+                Setting the airsim <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -504,7 +508,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -526,7 +530,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -740,7 +744,7 @@
   
 
   <script type="text/javascript">
-    var duoshuoQuery = {short_name:"your-duoshuo-shortname"};
+    var duoshuoQuery = {short_name:"comment"};
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
@@ -773,6 +777,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'n5NHN7mx2QS88J7pxg50WxrR-gzGzoHsz',
+        appKey: 'zoWdCwVEDDP1zinrqnSIzJke',
+        placeholder: '发表你的评论',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
