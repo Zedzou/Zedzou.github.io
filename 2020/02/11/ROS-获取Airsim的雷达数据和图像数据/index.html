@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ROS," />
+  <meta name="keywords" content="ROS,Airsim," />
 
 
 
@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="前言本文主要讲解安装Windows版本的ROS。">
+<meta name="description" content="本文主要讲解如何通过ROS获取Airsim的雷达数据和相机拍的图像数据，并用rviz将激光雷达的点云数据和相机的图像数据显示。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows系统安装ROS">
-<meta property="og:url" content="http://yoursite.com/child/2020/02/10/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85ROS/index.html">
+<meta property="og:title" content="ROS获取Airsim的雷达数据和图像数据">
+<meta property="og:url" content="http://yoursite.com/child/2020/02/11/ROS-%E8%8E%B7%E5%8F%96Airsim%E7%9A%84%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%92%8C%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE/index.html">
 <meta property="og:site_name" content="Zedzou的博客">
-<meta property="og:description" content="前言本文主要讲解安装Windows版本的ROS。">
-<meta property="og:image" content="http://yoursite.com/images/2.1.png">
-<meta property="og:image" content="http://yoursite.com/images/2.2.png">
-<meta property="article:published_time" content="2020-02-10T06:18:55.000Z">
-<meta property="article:modified_time" content="2020-02-11T11:04:06.994Z">
+<meta property="og:description" content="本文主要讲解如何通过ROS获取Airsim的雷达数据和相机拍的图像数据，并用rviz将激光雷达的点云数据和相机的图像数据显示。">
+<meta property="article:published_time" content="2020-02-11T15:00:32.000Z">
+<meta property="article:modified_time" content="2020-02-11T15:24:32.687Z">
 <meta property="article:author" content="Zedzou">
 <meta property="article:tag" content="ROS">
+<meta property="article:tag" content="Airsim">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/2.1.png">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/child/2020/02/10/windows系统安装ROS/"/>
+  <link rel="canonical" href="http://yoursite.com/child/2020/02/11/ROS-获取Airsim的雷达数据和图像数据/"/>
 
 
 
 
 
-  <title>windows系统安装ROS | Zedzou的博客</title>
+  <title>ROS获取Airsim的雷达数据和图像数据 | Zedzou的博客</title>
   
 
 
@@ -279,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/02/10/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85ROS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/02/11/ROS-%E8%8E%B7%E5%8F%96Airsim%E7%9A%84%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%92%8C%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zedzou">
@@ -296,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">windows系统安装ROS</h1>
+          <h1 class="post-title" itemprop="name headline">ROS获取Airsim的雷达数据和图像数据</h1>
         
 
         <div class="post-meta">
@@ -308,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-10T14:18:55+08:00">
-                2020-02-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-11T23:00:32+08:00">
+                2020-02-11
               </time>
             
 
@@ -331,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ROS/" itemprop="url" rel="index">
-                    <span itemprop="name">ROS</span>
+                  <a href="/categories/Airsim/" itemprop="url" rel="index">
+                    <span itemprop="name">Airsim</span>
                   </a>
                 </span>
 
@@ -349,8 +347,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/02/10/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85ROS/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2020/02/10/windows系统安装ROS/" itemprop="commentCount"></span>
+                <a href="/2020/02/11/ROS-%E8%8E%B7%E5%8F%96Airsim%E7%9A%84%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%92%8C%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2020/02/11/ROS-获取Airsim的雷达数据和图像数据/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -378,15 +376,15 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文主要讲解安装Windows版本的ROS。</p>
+        <p>本文主要讲解如何通过ROS获取Airsim的雷达数据和相机拍的图像数据，并用rviz将激光雷达的点云数据和相机的图像数据显示。</p>
 <a id="more"></a>
 
-<h1 id="1、前提"><a href="#1、前提" class="headerlink" title="1、前提"></a>1、前提</h1><p>已经在默认路径安装好visual studio2017；</p>
-<h1 id="2、ROS安装"><a href="#2、ROS安装" class="headerlink" title="2、ROS安装"></a>2、ROS安装</h1><h2 id="创建快捷方式并配置"><a href="#创建快捷方式并配置" class="headerlink" title="创建快捷方式并配置"></a>创建快捷方式并配置</h2><p>桌面空白处右键 “新建快捷方式”<br><img src="/images/2.1.png" alt><br>在输入框中输入以下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\System32\cmd.exe &#x2F;k &quot;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat&quot; -arch&#x3D;amd64 -host_arch&#x3D;amd64</span><br></pre></td></tr></table></figure>
+<h1 id="对Airsim设置激光雷达和相机。"><a href="#对Airsim设置激光雷达和相机。" class="headerlink" title="对Airsim设置激光雷达和相机。"></a>对Airsim设置激光雷达和相机。</h1><p>打开setting.json, 按照如下进行设置。具体看代码的注释。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;ClockSpeed&quot;: 1,</span><br><span class="line">  &quot;SeeDocsAt&quot;: &quot;https:&#x2F;&#x2F;github.com&#x2F;Microsoft&#x2F;AirSim&#x2F;blob&#x2F;master&#x2F;docs&#x2F;settings.md&quot;,</span><br><span class="line">  &quot;SettingsVersion&quot;: 1.2,</span><br><span class="line">  &quot;SimMode&quot;: &quot;Multirotor&quot;, #多轴飞行器</span><br><span class="line">  &quot;Vehicles&quot;: </span><br><span class="line">  </span><br><span class="line">  &#123;</span><br><span class="line">    &quot;Drone_1&quot;: &#123;</span><br><span class="line">      </span><br><span class="line">	  &quot;VehicleType&quot;: &quot;SimpleFlight&quot;,</span><br><span class="line">	  </span><br><span class="line">	  #传感器</span><br><span class="line">      &quot;Sensors&quot;: </span><br><span class="line">	  &#123;</span><br><span class="line">	    #激光雷达</span><br><span class="line">        &quot;MyLidar1&quot;:</span><br><span class="line">        &#123;</span><br><span class="line">          &quot;SensorType&quot;:6,#6代表激光雷达</span><br><span class="line">          &quot;Enabled&quot;:true,#打开激光雷达</span><br><span class="line">          &quot;NumberOfChannels&quot;:64, #64线激光雷达</span><br><span class="line">          &quot;PointsPerSecond&quot;:200000, #点云的数量</span><br><span class="line">          &quot;DrawDebugPoints&quot;:true,</span><br><span class="line">          &quot;VerticalFOVUpper&quot;: -15,</span><br><span class="line">          &quot;VerticalFOVLower&quot;: 25, </span><br><span class="line">          &quot;HorizontalFOVStart&quot;: -180, </span><br><span class="line">          &quot;HorizontalFOVEnd&quot;: 180, </span><br><span class="line">          &quot;DrawDebugPoints&quot;: true,</span><br><span class="line">          &quot;DataFrame&quot;: &quot;SensorLocalFrame&quot;,</span><br><span class="line">		  &quot;Roll&quot;: 0, &quot;Pitch&quot;: 0, &quot;Yaw&quot; : 0,</span><br><span class="line">		  &quot;X&quot;:0, &quot;Y&quot;:0, &quot;Z&quot;:-0.5</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">	  </span><br><span class="line">	  #相机</span><br><span class="line">      &quot;Cameras&quot;: </span><br><span class="line">	  &#123;</span><br><span class="line">        &quot;camera_1&quot;: </span><br><span class="line">		&#123;</span><br><span class="line">          &quot;CaptureSettings&quot;: </span><br><span class="line">		  [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;ImageType&quot;: 0,</span><br><span class="line">              &quot;Width&quot;: 256,</span><br><span class="line">              &quot;Height&quot;: 144,</span><br><span class="line">              &quot;FOV_Degrees&quot;: 90,</span><br><span class="line">              &quot;TargetGamma&quot;: 1.5</span><br><span class="line">            &#125; </span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;X&quot;: 0.0, &quot;Y&quot;: 0.0, &quot;Z&quot;: 0,</span><br><span class="line">      &quot;Pitch&quot;: 0, &quot;Roll&quot;: 0, &quot;Yaw&quot;: 0</span><br><span class="line">    &#125;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
 
-<p>/k前面的表示快捷方式指向的内容， 后面的表示打开快捷方式后执行的内容。<br>将快捷方式设为ROS<br><img src="/images/2.2.png" alt></p>
-
+<h1 id="ROS中的点云数据"><a href="#ROS中的点云数据" class="headerlink" title="ROS中的点云数据"></a>ROS中的点云数据</h1><p>ROS中的点云数据主要有三种，分别为pointcloud、pointcloud2、landscan。<br>pointcloud是ROS最开始的一种点云数据，相对pointcloud2来说已经过时，且实测对点云数据的获取速度较慢，不建议采用；<br>pointcloud2是ROS现在用的比较多的一种点云数据， 获取速度较快，且支持跟PCL点云数据进行互相转换，比较方便，建议采用；<br>lanscane是ROS对激光雷达设置的专门的点云数据，但点云数据是根据真是获得的点云处理过后的结果，大致的取点之间的平均点的结果，最终获取的点云数据不太真实。</p>
+<p>首先看pointcloud2数据的获取的例子，ROS具体代码如下,。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;env python </span><br><span class="line">#-*- coding:utf-8 -*-    #注意！！！此两行坚决不能少</span><br><span class="line"></span><br><span class="line">import rospy</span><br><span class="line">import airsim</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">from sensor_msgs.msg import PointCloud2</span><br><span class="line">import std_msgs.msg</span><br><span class="line">import sensor_msgs.point_cloud2 as pcl2</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    </span><br><span class="line">    #初始化节点</span><br><span class="line">    print(&quot;int the node&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&quot;)</span><br><span class="line">    rospy.init_node(&#39;drone1_lidar&#39;,anonymous&#x3D;True)</span><br><span class="line">    </span><br><span class="line">    # 连接仿真器</span><br><span class="line">    client &#x3D; airsim.MultirotorClient()</span><br><span class="line">    client.confirmConnection()</span><br><span class="line">    client.enableApiControl(True)</span><br><span class="line">    client.armDisarm(True)</span><br><span class="line">    print(&quot;connect successfully!&quot;)</span><br><span class="line">    </span><br><span class="line">    pcl_pub &#x3D; rospy.Publisher(&quot;&#x2F;pointcloud&quot;, PointCloud2)</span><br><span class="line">    rospy.loginfo(&quot;Initializing sample pcl2 publisher node...&quot;)</span><br><span class="line">    rospy.sleep(1.)</span><br><span class="line">    </span><br><span class="line">    while not rospy.is_shutdown():</span><br><span class="line">        </span><br><span class="line">        # get the lidar data</span><br><span class="line">        lidarData &#x3D; client.getLidarData()</span><br><span class="line">        </span><br><span class="line">        data &#x3D; lidarData.point_cloud</span><br><span class="line">        points &#x3D; np.array(data, dtype&#x3D;np.dtype(&#39;f4&#39;))</span><br><span class="line">        points &#x3D; np.reshape(points, (int(points.shape[0]&#x2F;3), 3))</span><br><span class="line">        #print (points.shape)</span><br><span class="line">        </span><br><span class="line">        header &#x3D; std_msgs.msg.Header()</span><br><span class="line">        header.stamp &#x3D; rospy.Time.now()</span><br><span class="line">        header.frame_id &#x3D; &#39;lidar&#39;</span><br><span class="line">            </span><br><span class="line">        scaled_polygon_pcl &#x3D; pcl2.create_cloud_xyz32(header, points)</span><br><span class="line">            </span><br><span class="line">        #publish    </span><br><span class="line">        rospy.loginfo(&quot;happily publishing sample pointcloud.. !&quot;)</span><br><span class="line">        pcl_pub.publish(scaled_polygon_pcl)</span><br><span class="line">        print (&quot;publish successfully&quot;)</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure> 
       
     </div>
     
@@ -406,7 +404,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/child/2020/02/10/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85ROS/" title="windows系统安装ROS">http://yoursite.com/child/2020/02/10/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85ROS/</a>
+    <a href="http://yoursite.com/child/2020/02/11/ROS-%E8%8E%B7%E5%8F%96Airsim%E7%9A%84%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%92%8C%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE/" title="ROS获取Airsim的雷达数据和图像数据">http://yoursite.com/child/2020/02/11/ROS-%E8%8E%B7%E5%8F%96Airsim%E7%9A%84%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%92%8C%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -423,6 +421,8 @@
           
             <a href="/tags/ROS/" rel="tag"># ROS</a>
           
+            <a href="/tags/Airsim/" rel="tag"># Airsim</a>
+          
         </div>
       
 
@@ -434,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/09/ROS-on-Windows/" rel="next" title="windows上使用ROS系统">
-                <i class="fa fa-chevron-left"></i> windows上使用ROS系统
+              <a href="/2020/02/11/Setting-the-airsim/" rel="next" title="Setting the airsim">
+                <i class="fa fa-chevron-left"></i> Setting the airsim
               </a>
             
           </div>
@@ -443,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/11/Setting-the-airsim/" rel="prev" title="Setting the airsim">
-                Setting the airsim <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -477,8 +473,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2020/02/10/windows系统安装ROS/"
-           data-title="windows系统安装ROS" data-url="http://yoursite.com/child/2020/02/10/windows%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85ROS/">
+      <div class="ds-thread" data-thread-key="2020/02/11/ROS-获取Airsim的雷达数据和图像数据/"
+           data-title="ROS获取Airsim的雷达数据和图像数据" data-url="http://yoursite.com/child/2020/02/11/ROS-%E8%8E%B7%E5%8F%96Airsim%E7%9A%84%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%92%8C%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE/">
       </div>
     </div>
 
@@ -612,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1、前提"><span class="nav-number">2.</span> <span class="nav-text">1、前提</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2、ROS安装"><span class="nav-number">3.</span> <span class="nav-text">2、ROS安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建快捷方式并配置"><span class="nav-number">3.1.</span> <span class="nav-text">创建快捷方式并配置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对Airsim设置激光雷达和相机。"><span class="nav-number">1.</span> <span class="nav-text">对Airsim设置激光雷达和相机。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ROS中的点云数据"><span class="nav-number">2.</span> <span class="nav-text">ROS中的点云数据</span></a></li></ol></div>
             
 
           </div>
