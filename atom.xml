@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2020-02-11T15:25:35.911Z</updated>
+  <updated>2020-02-12T09:33:30.671Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vcpkg主要问题及解决方法</title>
+    <link href="http://yoursite.com/child/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/child/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+    <published>2020-02-12T09:12:59.000Z</published>
+    <updated>2020-02-12T09:33:30.671Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文主要记录vcpkg使用过程的一些问题及解决办法。</p><a id="more"></a><h1 id="vcpkg安装过程下载"><a href="#vcpkg安装过程下载" class="headerlink" title="vcpkg安装过程下载"></a>vcpkg安装过程下载</h1><p>vcpkg在安装包的时候常出现下载太慢的情况，主要解决方法如下：<br>1、在vcpkg的安装终端复制下载链接，在浏览器或迅雷中进行下载；</p><p><img src="/images/vcpkg1.png" alt="复制下载链接"><br><img src="/images/vcpkg2.png" alt="浏览器中下载"></p><p>2、将下载的文件剪贴到 ./vcpkg/downloads/  中；</p><p><img src="/images/vcpkg3.png" alt="粘贴到downloads文件夹内"></p><p>3、打开./vcpkg/downloads/temp文件夹，该文件夹存储着正在下载的临时文件，看看正在下载的文件的命名，将文件的名字复制，粘贴到并将刚刚复制到downloads的文件的名字。</p><p>4、重启终端，重新输入安装命令即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要记录vcpkg使用过程的一些问题及解决办法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="vcpkg" scheme="http://yoursite.com/child/categories/vcpkg/"/>
+    
+    
+      <category term="vcpkg" scheme="http://yoursite.com/child/tags/vcpkg/"/>
+    
+  </entry>
   
   <entry>
     <title>ROS获取Airsim的雷达数据和图像数据</title>
