@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2020-02-12T09:33:30.671Z</updated>
+  <updated>2020-02-24T08:07:54.506Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL学习笔记</title>
+    <link href="http://yoursite.com/child/2020/02/24/MySQL/"/>
+    <id>http://yoursite.com/child/2020/02/24/MySQL/</id>
+    <published>2020-02-24T07:53:10.000Z</published>
+    <updated>2020-02-24T08:07:54.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>主要记录一下MySQL的学习笔记。课程来自哔哩哔哩的《MySQL 基础+高级篇- 数据库 -sql -尚硅谷》</p><a id="more"></a><h1 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>select 查询列表 from 表名;</p><p>特点：<br>1、查询列表可以是：表中的字段、常量值、表达式、函数<br>2、查询的结果是一个虚拟的表格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"> USE myemployees; #当前的操作表格</span><br><span class="line"></span><br><span class="line">#1.查询表中的单个字段</span><br><span class="line"> SELECT last_name FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#2.查询表中的多个字段</span><br><span class="line"> SELECT last_name,salary,email FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#3.查询表中的所有字段</span><br><span class="line">#方式一：</span><br><span class="line"> SELECT </span><br><span class="line">&#96;employee_id&#96;,</span><br><span class="line">&#96;first_name&#96;,</span><br><span class="line">&#96;last_name&#96;,</span><br><span class="line">&#96;phone_number&#96;,</span><br><span class="line">&#96;last_name&#96;,</span><br><span class="line">&#96;job_id&#96;,</span><br><span class="line">&#96;phone_number&#96;,</span><br><span class="line">&#96;job_id&#96;,</span><br><span class="line">&#96;salary&#96;,</span><br><span class="line">&#96;commission_pct&#96;,</span><br><span class="line">&#96;manager_id&#96;,</span><br><span class="line">&#96;department_id&#96;,</span><br><span class="line">&#96;hiredate&#96; </span><br><span class="line"> FROM</span><br><span class="line">employees ;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#方式二：  </span><br><span class="line"> SELECT * FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#4.查询常量值</span><br><span class="line"> SELECT 100;</span><br><span class="line"> SELECT &#39;john&#39;;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#5.查询表达式</span><br><span class="line"> SELECT 100%98;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#6.查询函数</span><br><span class="line"> SELECT VERSION();</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#7.起别名</span><br><span class="line"> &#x2F;*</span><br><span class="line"> ①便于理解</span><br><span class="line"> ②如果要查询的字段有重名的情况，使用别名可以区分开来</span><br><span class="line">*&#x2F;</span><br><span class="line"> #方式一：使用as</span><br><span class="line">SELECT 100%98 AS 结果;</span><br><span class="line">SELECT last_name AS 姓,first_name AS 名 FROM employees;</span><br><span class="line"></span><br><span class="line">#方式二：使用空格</span><br><span class="line">SELECT last_name 姓,first_name 名 FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#案例：查询salary，显示结果为 out put</span><br><span class="line">SELECT salary AS &quot;out put&quot; FROM employees;</span><br><span class="line"></span><br><span class="line">#8.去重</span><br><span class="line"></span><br><span class="line">#案例：查询员工表中涉及到的所有的部门编号</span><br><span class="line">SELECT DISTINCT department_id FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#9.+号的作用</span><br><span class="line"></span><br><span class="line">#案例：查询员工名和姓连接成一个字段，并显示为 姓名</span><br><span class="line"></span><br><span class="line">SELECT CONCAT(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;) AS 结果; #用CONCAT将a, b, c 连接起来</span><br><span class="line"></span><br><span class="line">SELECT </span><br><span class="line">CONCAT(last_name,first_name) AS 姓名 #用CONCAT将姓名连接起来</span><br><span class="line">FROM</span><br><span class="line">employees;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要记录一下MySQL的学习笔记。课程来自哔哩哔哩的《MySQL 基础+高级篇- 数据库 -sql -尚硅谷》&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/child/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/child/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>vcpkg主要问题及解决方法</title>
