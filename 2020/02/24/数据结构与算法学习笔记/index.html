@@ -96,11 +96,13 @@
 <meta property="og:url" content="http://yoursite.com/child/2020/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Zedzou的博客">
 <meta property="og:description" content="主要记录数据结构与算法的学习笔记。">
+<meta property="og:image" content="http://yoursite.com/images/Data_structure/4.png">
 <meta property="article:published_time" content="2020-02-24T14:20:40.000Z">
-<meta property="article:modified_time" content="2020-02-25T06:06:43.653Z">
+<meta property="article:modified_time" content="2020-02-25T06:47:31.643Z">
 <meta property="article:author" content="Zedzou">
 <meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/Data_structure/4.png">
 
 
 
@@ -387,7 +389,7 @@
 
 <h1 id="线性表的相关概念"><a href="#线性表的相关概念" class="headerlink" title="线性表的相关概念"></a>线性表的相关概念</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>线性表: n个同类型数据元素的有限序列,记为：L= (a1，a2，… ，ai ，… ，an)。<br>L为表名；<br>i为数据元素ai 在线性表中的位序；<br>n为线性表的表长; n=0 时称为空表；<br>数据元素之间的关系是：ai-1领先于ai，ai领先于ai+1。称ai-1是ai的直接前驱，ai+1是ai的直接后继，<br>除第一元素a1外，均有唯一的前驱；<br>除最后元素an外，均有唯一的后继；</p>
 <h2 id="线性表的相关操作"><a href="#线性表的相关操作" class="headerlink" title="线性表的相关操作"></a>线性表的相关操作</h2><p>线性表定义为指针类型SqListPtr，数据元素类型为ElemType。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Status List_Init(SqListPtr L); &#x2F;&#x2F;线性表初始化操作</span><br><span class="line">void List_Destory(SqListPtr L); &#x2F;&#x2F;线性表销毁</span><br><span class="line">void List_Clear(SqListPtr L); &#x2F;&#x2F;线性表清楚所有数据</span><br><span class="line">bool List_Empty(SqListPtr L); &#x2F;&#x2F;空的线性表</span><br><span class="line">int List_Size(SqListPtr L); &#x2F;&#x2F;线性表的大小</span><br><span class="line">Status List_Retrival(SqListPtr L, int pos, ElemType *elem); &#x2F;&#x2F;检索线性表位于pos处的元素，并复制给elem</span><br><span class="line">Status List_Locate(SqListPtr L, ElemType elem, int *pos); &#x2F;&#x2F;查询线性表中是否有元素elem</span><br><span class="line">Status List_Insert(SqListPtr L, int pos, ElemType elem); &#x2F;&#x2F;给线性表插入某个元素</span><br><span class="line">Status List_delete(SqListPtr L, int pos); &#x2F;&#x2F;删除线性表中某个元素</span><br><span class="line">Status List_Prior(SqListPtr L, int pos, ElemType * elem); &#x2F;&#x2F;线性表的前驱</span><br><span class="line">Status List_Next(SqListPtr L, int pos, ElemType *elem); &#x2F;&#x2F;线性表的后继</span><br></pre></td></tr></table></figure> 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;线性表初始化操作</span><br><span class="line">Status List_Init(SqListPtr L); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;线性表销毁</span><br><span class="line">void List_Destory(SqListPtr L); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;线性表清楚所有数据</span><br><span class="line">void List_Clear(SqListPtr L); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;空的线性表</span><br><span class="line">bool List_Empty(SqListPtr L); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;线性表的大小</span><br><span class="line">int List_Size(SqListPtr L); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;检索线性表位于pos处的元素，并复制给elem</span><br><span class="line">Status List_Retrival(SqListPtr L, int pos, ElemType *elem); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;查询线性表中是否有元素elem</span><br><span class="line">Status List_Locate(SqListPtr L, ElemType elem, int *pos); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;给线性表插入某个元素</span><br><span class="line">Status List_Insert(SqListPtr L, int pos, ElemType elem); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;删除线性表中某个元素</span><br><span class="line">Status List_delete(SqListPtr L, int pos); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;线性表的前驱</span><br><span class="line">Status List_Prior(SqListPtr L, int pos, ElemType * elem); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;线性表的后继</span><br><span class="line">Status List_Next(SqListPtr L, int pos, ElemType *elem); </span><br></pre></td></tr></table></figure> 
 
 <h2 id="示例-合并列表"><a href="#示例-合并列表" class="headerlink" title="示例(合并列表)"></a>示例(合并列表)</h2><p>1、合并线性表</p>
 <p>问题：集合A和B分别用两个线性表LA和LB表示，求A∪B并用线性表LA表示。</p>
@@ -409,21 +411,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">Status List_Merge(SqListPtr La, SqListPtr Lb, SqListPtr Lc)</span><br><span class="line">&#123;</span><br><span class="line">	ElemType elem1, elem2;</span><br><span class="line">	List_Init (Lc);</span><br><span class="line">	int i &#x3D; 1, j &#x3D;1, k&#x3D;1;</span><br><span class="line">	int n &#x3D; List_Size(La);</span><br><span class="line">	int m &#x3D; List_Size(Lb);</span><br><span class="line">	while (i &lt;&#x3D; n  &amp;&amp; j &lt;&#x3D; m) &#x2F;&#x2F;两个表均未处理完</span><br><span class="line">	&#123;</span><br><span class="line">		List_Retrieve(La, i, &amp;elem1);</span><br><span class="line">		List_Retrieve(Lb, j, &amp;elem2);</span><br><span class="line">		if (elem1 &lt; elem2) &#x2F;&#x2F;在Lc线性列表中插入较小的元素</span><br><span class="line">		&#123;</span><br><span class="line">			status &#x3D; List_Insert(Lc, k , elem1);</span><br><span class="line">			i &#x3D; 1+1;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			status &#x3D; List_Insert(Lc, k, elem2);</span><br><span class="line">			j &#x3D; j+1;</span><br><span class="line">		&#125;</span><br><span class="line">		k &#x3D; k+1; &#x2F;&#x2F;Lc指针往后走</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	while (i &lt;&#x3D; n) &#x2F;&#x2F;表La已经处理完，Lb没有处理完</span><br><span class="line">	&#123;</span><br><span class="line">		List_Retrieve(La, i, &amp;elem1);</span><br><span class="line">		List_Insert(Lc, k, elem1);</span><br><span class="line">		i&#x3D; i+1;</span><br><span class="line">		k&#x3D; k+1;</span><br><span class="line">	&#125;</span><br><span class="line">	while (j &lt;&#x3D; m)</span><br><span class="line">	&#123;</span><br><span class="line">		List_Retrieve(Lb, j, &amp;elem2);</span><br><span class="line">		List_Insert(Lc, k, elem2);</span><br><span class="line">		j &#x3D; j+1;</span><br><span class="line">		k &#x3D; k+1;</span><br><span class="line">	&#125;</span><br><span class="line">	return status;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h1 id="线性表的存储结构及基本操作的实现"><a href="#线性表的存储结构及基本操作的实现" class="headerlink" title="线性表的存储结构及基本操作的实现"></a>线性表的存储结构及基本操作的实现</h1><h2 id="顺序存储结构"><a href="#顺序存储结构" class="headerlink" title="顺序存储结构"></a>顺序存储结构</h2><p>用一组地址连续的存储单元依次存放线性表中的数据元素。</p>
+<p><img src="/images/Data_structure/4.png" alt="线性表的存储"></p>
+<p>优点：可以随机的存储数据</p>
 
       
     </div>
@@ -481,6 +471,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/26/hexo%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="prev" title="hexo相关问题记录">
+                hexo相关问题记录 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -568,7 +562,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -579,7 +573,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -590,7 +584,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -646,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性表的相关概念"><span class="nav-number">1.</span> <span class="nav-text">线性表的相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表的相关操作"><span class="nav-number">1.2.</span> <span class="nav-text">线性表的相关操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-合并列表"><span class="nav-number">1.3.</span> <span class="nav-text">示例(合并列表)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性表的相关概念"><span class="nav-number">1.</span> <span class="nav-text">线性表的相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表的相关操作"><span class="nav-number">1.2.</span> <span class="nav-text">线性表的相关操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例-合并列表"><span class="nav-number">1.3.</span> <span class="nav-text">示例(合并列表)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性表的存储结构及基本操作的实现"><span class="nav-number">2.</span> <span class="nav-text">线性表的存储结构及基本操作的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#顺序存储结构"><span class="nav-number">2.1.</span> <span class="nav-text">顺序存储结构</span></a></li></ol></li></ol></div>
             
 
           </div>
