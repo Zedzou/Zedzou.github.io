@@ -90,17 +90,22 @@
 
 
 
-<meta name="description" content="主要记录一下MySQL的学习笔记。课程来自哔哩哔哩的《MySQL 基础+高级篇- 数据库 -sql -尚硅谷》SQL从删库到跑路！！！！">
+<meta name="description" content="主要记录如何通过C&#x2F;C++连接MySQL数据库，并进行常见的MySQL数据库操作,最后实现了简单的学生（或职工）信息管理系统。SQL从删库到跑路！！！！ （口号一定要响）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL从删库到跑路&lt;一&gt;：基础查询">
-<meta property="og:url" content="http://yoursite.com/child/2020/02/24/MySQL/index.html">
+<meta property="og:title" content="C&#x2F;C++连接MySQL数据库并进行常见操作">
+<meta property="og:url" content="http://yoursite.com/child/2020/02/28/C-C-%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Zedzou的博客">
-<meta property="og:description" content="主要记录一下MySQL的学习笔记。课程来自哔哩哔哩的《MySQL 基础+高级篇- 数据库 -sql -尚硅谷》SQL从删库到跑路！！！！">
-<meta property="article:published_time" content="2020-02-24T07:53:10.000Z">
-<meta property="article:modified_time" content="2020-02-24T10:12:50.360Z">
+<meta property="og:description" content="主要记录如何通过C&#x2F;C++连接MySQL数据库，并进行常见的MySQL数据库操作,最后实现了简单的学生（或职工）信息管理系统。SQL从删库到跑路！！！！ （口号一定要响）">
+<meta property="og:image" content="http://yoursite.com/images/MySQL/MySQL1.jpg">
+<meta property="og:image" content="http://yoursite.com/images/MySQL/MySQL3.jpg">
+<meta property="og:image" content="http://yoursite.com/images/MySQL/MySQL4.jpg">
+<meta property="og:image" content="http://yoursite.com/images/MySQL/MySQL5.jpg">
+<meta property="article:published_time" content="2020-02-28T10:06:59.000Z">
+<meta property="article:modified_time" content="2020-02-28T10:38:22.812Z">
 <meta property="article:author" content="Zedzou">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/MySQL/MySQL1.jpg">
 
 
 
@@ -130,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/child/2020/02/24/MySQL/"/>
+  <link rel="canonical" href="http://yoursite.com/child/2020/02/28/C-C-连接MySQL数据库并进行常见操作/"/>
 
 
 
 
 
-  <title>SQL从删库到跑路<一>：基础查询 | Zedzou的博客</title>
+  <title>C/C++连接MySQL数据库并进行常见操作 | Zedzou的博客</title>
   
 
 
@@ -283,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/02/24/MySQL/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/02/28/C-C-%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zedzou">
@@ -300,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SQL从删库到跑路<一>：基础查询</h1>
+          <h1 class="post-title" itemprop="name headline">C/C++连接MySQL数据库并进行常见操作</h1>
         
 
         <div class="post-meta">
@@ -312,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-24T15:53:10+08:00">
-                2020-02-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-28T18:06:59+08:00">
+                2020-02-28
               </time>
             
 
@@ -353,8 +358,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/02/24/MySQL/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2020/02/24/MySQL/" itemprop="commentCount"></span>
+                <a href="/2020/02/28/C-C-%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2020/02/28/C-C-连接MySQL数据库并进行常见操作/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -382,13 +387,13 @@
       
 
       
-        <p>主要记录一下MySQL的学习笔记。课程来自哔哩哔哩的《MySQL 基础+高级篇- 数据库 -sql -尚硅谷》<br>SQL从删库到跑路！！！！</p>
+        <p>主要记录如何通过C/C++连接MySQL数据库，并进行常见的MySQL数据库操作,最后实现了简单的学生（或职工）信息管理系统。<br>SQL从删库到跑路！！！！ （口号一定要响）</p>
 <a id="more"></a>
 
-<h1 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>select 查询列表 from 表名;</p>
-<p>特点：<br>1、查询列表可以是：表中的字段、常量值、表达式、函数<br>2、查询的结果是一个虚拟的表格</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"> USE myemployees; #当前的操作表格</span><br><span class="line"></span><br><span class="line">#1.查询表中的单个字段</span><br><span class="line"> SELECT last_name FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#2.查询表中的多个字段</span><br><span class="line"> SELECT last_name,salary,email FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#3.查询表中的所有字段</span><br><span class="line">	#方式一：</span><br><span class="line">	 SELECT </span><br><span class="line">		&#96;employee_id&#96;,</span><br><span class="line">		&#96;first_name&#96;,</span><br><span class="line">		&#96;last_name&#96;,</span><br><span class="line">		&#96;phone_number&#96;,</span><br><span class="line">		&#96;last_name&#96;,</span><br><span class="line">		&#96;job_id&#96;,</span><br><span class="line">		&#96;phone_number&#96;,</span><br><span class="line">		&#96;job_id&#96;,</span><br><span class="line">		&#96;salary&#96;,</span><br><span class="line">		&#96;commission_pct&#96;,</span><br><span class="line">		&#96;manager_id&#96;,</span><br><span class="line">		&#96;department_id&#96;,</span><br><span class="line">		&#96;hiredate&#96; </span><br><span class="line">	 FROM</span><br><span class="line">		employees ;</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">	#方式二：  </span><br><span class="line">	 SELECT * FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#4.查询常量值</span><br><span class="line"> SELECT 100;</span><br><span class="line"> SELECT &#39;john&#39;;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#5.查询表达式</span><br><span class="line"> SELECT 100%98;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#6.查询函数</span><br><span class="line"> SELECT VERSION();</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#7.起别名</span><br><span class="line">	 &#x2F;*</span><br><span class="line">	 ①便于理解</span><br><span class="line">	 ②如果要查询的字段有重名的情况，使用别名可以区分开来</span><br><span class="line">	*&#x2F;</span><br><span class="line">	 #方式一：使用as</span><br><span class="line">	SELECT 100%98 AS 结果;</span><br><span class="line">	SELECT last_name AS 姓,first_name AS 名 FROM employees;</span><br><span class="line"></span><br><span class="line">	#方式二：使用空格</span><br><span class="line">	SELECT last_name 姓,first_name 名 FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#案例：查询salary，显示结果为 out put</span><br><span class="line">SELECT salary AS &quot;out put&quot; FROM employees;</span><br><span class="line"></span><br><span class="line">#8.去重</span><br><span class="line"></span><br><span class="line">#案例：查询员工表中涉及到的所有的部门编号</span><br><span class="line">SELECT DISTINCT department_id FROM employees;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#9.+号的作用</span><br><span class="line"></span><br><span class="line">#案例：查询员工名和姓连接成一个字段，并显示为 姓名</span><br><span class="line"></span><br><span class="line">SELECT CONCAT(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;) AS 结果; #用CONCAT将a, b, c 连接起来</span><br><span class="line"></span><br><span class="line">SELECT </span><br><span class="line">	CONCAT(last_name,first_name) AS 姓名 #用CONCAT将姓名连接起来</span><br><span class="line">FROM</span><br><span class="line">	employees;</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
-
+<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><p>1、下载并安装<br>首先安装<a href="https://downloads.mysql.com/archives/community/" target="_blank" rel="noopener" title="点击下载MySQL installer">MySQL Server</a><br>将MySQL installer安装好后，打开(我这个已经安装好了好几个)。<br><img src="/images/MySQL/MySQL1.jpg" alt="MySQL"><br>点击右上角的add,中间就是我们能安装的所有东西。<br>！<a href="/images/MySQL/MySQL2.jpg">MySQL2</a><br>展开MySQL servers,选中一个合适的版本，并点击中间栏的右向键，将需要安装的内容推送到右侧（安装路径建议默认），<br><img src="/images/MySQL/MySQL3.jpg" alt="MySQL3"><br>随后点击next,并按照提示设置服务器数据库管理系统的用户名和密码，用户名和密码必须记牢固。</p>
+<p>2、测试是否安装成功<br>打开cmd终端，切换到MySQL的安装目录或者在开始菜单打开 MySQL Commend Line Client, 输入前面安装时设置的服务器数据库管理系统密码（cmd终端貌似不需要输入密码）。<br><img src="/images/MySQL/MySQL4.jpg" alt="MySQL4"><br>点击Enter后出现以下内容即代表安装成功<br><img src="/images/MySQL/MySQL5.jpg" alt="MySQL5"></p>
+<h2 id="配置C-C连接MySQL数据库的环境"><a href="#配置C-C连接MySQL数据库的环境" class="headerlink" title="配置C++/C连接MySQL数据库的环境"></a>配置C++/C连接MySQL数据库的环境</h2><p>（1）添加包含目录：【安装位置\MySQL Server 5.6\include】<br><br>（2）添加库目录：【安装位置\MySQL Server 5.6\lib】<br><br>（3）让IDE包含必要的链接库文件：【安装位置\MySQL Server 5.6\lib\libmysql.lib】(vs中一般为‘链接器’-‘输入’-‘附加依赖项’:添加libmysql.lib)</p>
+<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char SqlText[256] &#x3D; &quot;&quot;;  &#x2F;&#x2F;将用来保存要执行的SQL语句</span><br><span class="line">	MYSQL *conn &#x3D; NULL;      &#x2F;&#x2F;MYSQL句柄类型(任何一个mysql操作都是基于MYSQL这个句柄来操作的)</span><br><span class="line">	MYSQL_RES *res &#x3D; NULL;   &#x2F;&#x2F;数据查询结果集</span><br><span class="line">	MYSQL_FIELD * fd &#x3D; NULL; &#x2F;&#x2F;MySQL表头域类型</span><br><span class="line">	MYSQL_ROW row;           &#x2F;&#x2F;一个行数据的类型安全(type-safe)的表示</span><br><span class="line">	conn &#x3D; mysql_init(NULL); &#x2F;&#x2F;初始化MYSQL连接</span><br><span class="line">	char  server[20] &#x3D; &quot;localhost&quot;; &#x2F;&#x2F;mysql服务器的IP</span><br><span class="line">	char  user[20] &#x3D; &quot;root&quot;;        &#x2F;&#x2F;用户名</span><br><span class="line">	char  psd[20] &#x3D; &quot;199601151239Zedzou&quot;;       &#x2F;&#x2F;&#x2F;密码  需要改为自己的密码</span><br><span class="line">	char  dbName[1024] &#x3D; &quot;myemployees&quot;;    &#x2F;&#x2F;&#x2F;数据库名 需要改为自己的数据库名</span><br><span class="line">	unsigned short port &#x3D; 3306;     &#x2F;&#x2F;服务器端口号,默认3306</span><br><span class="line">	</span><br><span class="line">		&#x2F;&#x2F;&#x2F;建立mysql连接</span><br><span class="line">	if (mysql_real_connect(conn, server, user, psd, dbName, port, NULL, 0) &#x3D;&#x3D; 0) </span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;Error connecting to database: %s\n&quot;, mysql_error(conn));</span><br><span class="line">	&#125;</span><br><span class="line">	else </span><br><span class="line">	&#123;</span><br><span class="line">		puts(&quot;数据库连接成功！&quot;);</span><br><span class="line">		mysql_query(conn, &quot;set names &#39;GBK&#39;&quot;); &#x2F;&#x2F;设置字符集,防止中文无法正常显示[可选操作]</span><br><span class="line">		&#x2F;&#x2F;&#x2F;下面开始对数据库进行操作</span><br><span class="line">		const char tableName[30] &#x3D; &quot;employees&quot;;&#x2F;&#x2F;要操作的表名</span><br><span class="line"></span><br><span class="line">		&#x2F;&#x2F;查找</span><br><span class="line">		sprintf(SqlText, &quot;select * from %s &quot;, tableName);</span><br><span class="line">		if (mysql_query(conn, SqlText) &#x3D;&#x3D; 0)     &#x2F;&#x2F;执行成功则把结果输出</span><br><span class="line">		&#123;      </span><br><span class="line">			res &#x3D; mysql_store_result(conn);        &#x2F;&#x2F;存储查询得到的结果集</span><br><span class="line">			printf(&quot;&gt;&gt;&gt;执行: %s\nrecords nums:&quot;, SqlText);</span><br><span class="line">			printf(&quot;%u\n\n&quot;, mysql_num_rows(res)); &#x2F;&#x2F;获取搜索到的结果集的条数</span><br><span class="line">			&#x2F;&#x2F;输出数据结果各字段名,即表头被选取的部分</span><br><span class="line">			while ((fd &#x3D; mysql_fetch_field(res)) !&#x3D; NULL) </span><br><span class="line">			&#123;</span><br><span class="line">				printf(&quot;%-10s &quot;, fd-&gt;name);</span><br><span class="line">			&#125;</span><br><span class="line">			puts(&quot;&quot;);</span><br><span class="line">			&#x2F;&#x2F;打印获取的数据</span><br><span class="line">			int fieldNums &#x3D; mysql_num_fields(res); &#x2F;&#x2F;获取数据结果每条记录的列数</span><br><span class="line">			while ((row &#x3D; mysql_fetch_row(res)) !&#x3D; NULL)  &#x2F;&#x2F;不断获取下一组结果</span><br><span class="line">			&#123; </span><br><span class="line">				for (int i &#x3D; 0; i &lt; fieldNums; i++) </span><br><span class="line">				&#123;</span><br><span class="line">					printf(&quot;%-10s &quot;, row[i]);</span><br><span class="line">				&#125;</span><br><span class="line">				puts(&quot;&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			mysql_free_result(res); &#x2F;&#x2F;释放结果集资源</span><br><span class="line">		&#125;</span><br><span class="line">		else </span><br><span class="line">		&#123;</span><br><span class="line">			printf(&quot;查询失败: %s\n&quot;, mysql_error(conn));</span><br><span class="line">		&#125;</span><br><span class="line">		&#x2F;&#x2F;修改</span><br><span class="line">		sprintf(SqlText, &quot;update %s set passwd&#x3D;&#39;passwd&#39; where id&#x3D;&#39;2&#39;&quot;, tableName);</span><br><span class="line">		printf(&quot;&gt;&gt;&gt;执行: %s\n&quot;, SqlText); </span><br><span class="line">		if (mysql_query(conn, SqlText) !&#x3D; 0)   &#x2F;&#x2F;执行sql语句</span><br><span class="line">		&#123;</span><br><span class="line">			printf(&quot;Can&#39;t update data on table: &quot;);</span><br><span class="line">			printf(&quot;%s\n&quot;, mysql_error(conn)); &#x2F;&#x2F;获取最后一次查询失败的错误提示</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	mysql_close(conn); &#x2F;&#x2F;关闭连接，即释放连接</span><br><span class="line">	getchar();</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -411,7 +416,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/child/2020/02/24/MySQL/" title="SQL从删库到跑路<一>：基础查询">http://yoursite.com/child/2020/02/24/MySQL/</a>
+    <a href="http://yoursite.com/child/2020/02/28/C-C-%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" title="C/C++连接MySQL数据库并进行常见操作">http://yoursite.com/child/2020/02/28/C-C-%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -439,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" rel="next" title="vcpkg主要问题及解决方法">
-                <i class="fa fa-chevron-left"></i> vcpkg主要问题及解决方法
+              <a href="/2020/02/28/%E5%8F%8D%E6%AD%A3%E6%B2%A1%E4%BA%BA%E7%9C%8B%EF%BC%8C%E6%88%91%E5%B0%B1%E7%9E%8E%E5%86%99%E7%82%B9%E7%94%9F%E6%B4%BB/" rel="next" title="反正没人看，我就瞎写点生活">
+                <i class="fa fa-chevron-left"></i> 反正没人看，我就瞎写点生活
               </a>
             
           </div>
@@ -448,10 +453,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/24/c-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/" rel="prev" title="c++服务器开发学习">
-                c++服务器开发学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -482,8 +483,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2020/02/24/MySQL/"
-           data-title="SQL从删库到跑路<一>：基础查询" data-url="http://yoursite.com/child/2020/02/24/MySQL/">
+      <div class="ds-thread" data-thread-key="2020/02/28/C-C-连接MySQL数据库并进行常见操作/"
+           data-title="C/C++连接MySQL数据库并进行常见操作" data-url="http://yoursite.com/child/2020/02/28/C-C-%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
       </div>
     </div>
 
@@ -617,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础查询"><span class="nav-number">1.</span> <span class="nav-text">基础查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MySQL"><span class="nav-number">1.1.</span> <span class="nav-text">安装MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置C-C连接MySQL数据库的环境"><span class="nav-number">1.2.</span> <span class="nav-text">配置C++&#x2F;C连接MySQL数据库的环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试代码"><span class="nav-number">1.3.</span> <span class="nav-text">测试代码</span></a></li></ol></li></ol></div>
             
 
           </div>
