@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="vcpkg," />
+  <meta name="keywords" content="ROS," />
 
 
 
@@ -90,21 +90,20 @@
 
 
 
-<meta name="description" content="本文主要记录vcpkg使用过程的一些问题及解决办法。">
+<meta name="description" content="创建工作空间和功能包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vcpkg主要问题及解决方法">
-<meta property="og:url" content="http://yoursite.com/child/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="ROS学习&lt;一&gt;">
+<meta property="og:url" content="http://yoursite.com/child/2020/07/20/ROS-Studying/index.html">
 <meta property="og:site_name" content="Zedzou的博客">
-<meta property="og:description" content="本文主要记录vcpkg使用过程的一些问题及解决办法。">
-<meta property="og:image" content="http://yoursite.com/images/vcpkg1.png">
-<meta property="og:image" content="http://yoursite.com/images/vcpkg2.png">
-<meta property="og:image" content="http://yoursite.com/images/vcpkg3.png">
-<meta property="article:published_time" content="2020-02-12T09:12:59.000Z">
-<meta property="article:modified_time" content="2020-02-12T09:33:32.000Z">
+<meta property="og:description" content="创建工作空间和功能包">
+<meta property="og:image" content="http://yoursite.com/images/ROS/ros_studying/1.png">
+<meta property="og:image" content="http://yoursite.com/images/ROS/ros_studying/2.png">
+<meta property="article:published_time" content="2020-07-19T19:05:17.000Z">
+<meta property="article:modified_time" content="2020-07-19T19:27:15.430Z">
 <meta property="article:author" content="Zedzou">
-<meta property="article:tag" content="vcpkg">
+<meta property="article:tag" content="ROS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/vcpkg1.png">
+<meta name="twitter:image" content="http://yoursite.com/images/ROS/ros_studying/1.png">
 
 
 
@@ -134,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/child/2020/02/12/vcpkg主要问题及解决方法/"/>
+  <link rel="canonical" href="http://yoursite.com/child/2020/07/20/ROS-Studying/"/>
 
 
 
 
 
-  <title>vcpkg主要问题及解决方法 | Zedzou的博客</title>
+  <title>ROS学习<一> | Zedzou的博客</title>
   
 
 
@@ -287,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/07/20/ROS-Studying/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zedzou">
@@ -304,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vcpkg主要问题及解决方法</h1>
+          <h1 class="post-title" itemprop="name headline">ROS学习<一></h1>
         
 
         <div class="post-meta">
@@ -316,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-12T17:12:59+08:00">
-                2020-02-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-20T03:05:17+08:00">
+                2020-07-20
               </time>
             
 
@@ -339,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/vcpkg/" itemprop="url" rel="index">
-                    <span itemprop="name">vcpkg</span>
+                  <a href="/categories/Airsim/" itemprop="url" rel="index">
+                    <span itemprop="name">Airsim</span>
                   </a>
                 </span>
 
@@ -357,8 +356,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2020/02/12/vcpkg主要问题及解决方法/" itemprop="commentCount"></span>
+                <a href="/2020/07/20/ROS-Studying/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2020/07/20/ROS-Studying/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -386,16 +385,23 @@
       
 
       
-        <p>本文主要记录vcpkg使用过程的一些问题及解决办法。</p>
+        <p>创建工作空间和功能包</p>
 <a id="more"></a>
 
-<h1 id="vcpkg安装过程下载"><a href="#vcpkg安装过程下载" class="headerlink" title="vcpkg安装过程下载"></a>vcpkg安装过程下载</h1><p>vcpkg在安装包的时候常出现下载太慢的情况，主要解决方法如下：<br>1、在vcpkg的安装终端复制下载链接，在浏览器或迅雷中进行下载；</p>
-<p><img src="/images/vcpkg1.png" alt="复制下载链接"><br><img src="/images/vcpkg2.png" alt="浏览器中下载"></p>
-<p>2、将下载的文件剪贴到 ./vcpkg/downloads/  中；</p>
-<p><img src="/images/vcpkg3.png" alt="粘贴到downloads文件夹内"></p>
-<p>3、打开./vcpkg/downloads/temp文件夹，该文件夹存储着正在下载的临时文件，看看正在下载的文件的命名，将文件的名字复制，粘贴到并将刚刚复制到downloads的文件的名字。</p>
-<p>4、重启终端，重新输入安装命令即可。</p>
+<h1 id="工作空间"><a href="#工作空间" class="headerlink" title="工作空间"></a>工作空间</h1><p>ROS的项目管理都是以工作空间进行管理的（工作空间，一个文件夹），工作空间是一个存放工程开发相关文件的文件夹。工作空间主要有一下4个文件夹。<br>1、src：代码空间（Source Space）<br>2、build: 编译空间（Build Space）<br>3、devel: 开发空间（Development Space）<br>4、install： 安装空间（Install Space）<br><img src="/images/ROS/ros_studying/1.png" alt="catkin编译系统下的工作空间结构"></p>
+<h1 id="创建工作空间"><a href="#创建工作空间" class="headerlink" title="创建工作空间"></a>创建工作空间</h1><p>1、创建工作空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p ~&#x2F;catkin_ws&#x2F;src #创建名字为catkin_ws的工作空间</span><br><span class="line">$ cd ~&#x2F;catkin_ws&#x2F;src     </span><br><span class="line">$ catkin_init_workspace #初始化工作空间</span><br></pre></td></tr></table></figure> 
 
+<p>2、编译工作空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;catkin_ws&#x2F;</span><br><span class="line">$ catkin_make</span><br></pre></td></tr></table></figure> 
+
+<p>3、设置环境变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source devel&#x2F;setup.bash</span><br></pre></td></tr></table></figure> 
+
+<p>4、检查环境变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo ￥ROS_PACKAGE_PATH</span><br></pre></td></tr></table></figure> 
+<p><img src="/images/ROS/ros_studying/2.png" alt="检查环境变量"></p>
+<h1 id="创建功能包"><a href="#创建功能包" class="headerlink" title="创建功能包"></a>创建功能包</h1>
       
     </div>
     
@@ -415,7 +421,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/child/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="vcpkg主要问题及解决方法">http://yoursite.com/child/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</a>
+    <a href="http://yoursite.com/child/2020/07/20/ROS-Studying/" title="ROS学习<一>">http://yoursite.com/child/2020/07/20/ROS-Studying/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -430,7 +436,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/vcpkg/" rel="tag"># vcpkg</a>
+            <a href="/tags/ROS/" rel="tag"># ROS</a>
           
         </div>
       
@@ -443,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/11/ROS-%E8%8E%B7%E5%8F%96Airsim%E7%9A%84%E9%9B%B7%E8%BE%BE%E6%95%B0%E6%8D%AE%E5%92%8C%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE/" rel="next" title="ROS获取Airsim的雷达数据和图像数据">
-                <i class="fa fa-chevron-left"></i> ROS获取Airsim的雷达数据和图像数据
+              <a href="/2020/05/18/ContextCapture-smart3D%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%A0%B4%E8%A7%A3/" rel="next" title="ContextCapture(smart3D)">
+                <i class="fa fa-chevron-left"></i> ContextCapture(smart3D)
               </a>
             
           </div>
@@ -452,10 +458,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/24/MySQL/" rel="prev" title="SQL从删库到跑路<一>：基础查询">
-                SQL从删库到跑路<一>：基础查询 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -486,8 +488,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2020/02/12/vcpkg主要问题及解决方法/"
-           data-title="vcpkg主要问题及解决方法" data-url="http://yoursite.com/child/2020/02/12/vcpkg%E4%B8%BB%E8%A6%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+      <div class="ds-thread" data-thread-key="2020/07/20/ROS-Studying/"
+           data-title="ROS学习<一>" data-url="http://yoursite.com/child/2020/07/20/ROS-Studying/">
       </div>
     </div>
 
@@ -621,7 +623,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vcpkg安装过程下载"><span class="nav-number">1.</span> <span class="nav-text">vcpkg安装过程下载</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#工作空间"><span class="nav-number">1.</span> <span class="nav-text">工作空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建工作空间"><span class="nav-number">2.</span> <span class="nav-text">创建工作空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建功能包"><span class="nav-number">3.</span> <span class="nav-text">创建功能包</span></a></li></ol></div>
             
 
           </div>
