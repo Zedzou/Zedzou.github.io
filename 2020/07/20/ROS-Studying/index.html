@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://yoursite.com/images/ROS/ros_studying/1.png">
 <meta property="og:image" content="http://yoursite.com/images/ROS/ros_studying/2.png">
 <meta property="article:published_time" content="2020-07-19T19:05:17.000Z">
-<meta property="article:modified_time" content="2020-07-19T19:35:03.582Z">
+<meta property="article:modified_time" content="2020-07-19T19:36:14.342Z">
 <meta property="article:author" content="Zedzou">
 <meta property="article:tag" content="ROS">
 <meta name="twitter:card" content="summary">
@@ -388,8 +388,8 @@
         <p>创建工作空间和功能包</p>
 <a id="more"></a>
 
-<h1 id="工作空间"><a href="#工作空间" class="headerlink" title="工作空间"></a>工作空间</h1><p>ROS的项目管理都是以工作空间进行管理的（工作空间，一个文件夹），工作空间是一个存放工程开发相关文件的文件夹。工作空间主要有一下4个文件夹。<br>1、src：代码空间（Source Space）<br>2、build: 编译空间（Build Space）<br>3、devel: 开发空间（Development Space）<br>4、install： 安装空间（Install Space）<br><img src="/images/ROS/ros_studying/1.png" alt="catkin编译系统下的工作空间结构"></p>
-<h1 id="创建工作空间"><a href="#创建工作空间" class="headerlink" title="创建工作空间"></a>创建工作空间</h1><p>1、创建工作空间</p>
+<h1 id="1、工作空间"><a href="#1、工作空间" class="headerlink" title="1、工作空间"></a>1、工作空间</h1><p>ROS的项目管理都是以工作空间进行管理的（工作空间，一个文件夹），工作空间是一个存放工程开发相关文件的文件夹。工作空间主要有一下4个文件夹。<br>1、src：代码空间（Source Space）<br>2、build: 编译空间（Build Space）<br>3、devel: 开发空间（Development Space）<br>4、install： 安装空间（Install Space）<br><img src="/images/ROS/ros_studying/1.png" alt="catkin编译系统下的工作空间结构"></p>
+<h1 id="2、创建工作空间"><a href="#2、创建工作空间" class="headerlink" title="2、创建工作空间"></a>2、创建工作空间</h1><p>1、创建工作空间</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p ~&#x2F;catkin_ws&#x2F;src #创建名字为catkin_ws的工作空间</span><br><span class="line">$ cd ~&#x2F;catkin_ws&#x2F;src     </span><br><span class="line">$ catkin_init_workspace #初始化工作空间</span><br></pre></td></tr></table></figure> 
 
 <p>2、编译工作空间</p>
@@ -401,11 +401,11 @@
 <p>4、检查环境变量</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo ￥ROS_PACKAGE_PATH</span><br></pre></td></tr></table></figure> 
 <p><img src="/images/ROS/ros_studying/2.png" alt="检查环境变量"></p>
-<h1 id="创建功能包"><a href="#创建功能包" class="headerlink" title="创建功能包"></a>创建功能包</h1><p>1、创建功能包</p>
+<h1 id="3、创建功能包"><a href="#3、创建功能包" class="headerlink" title="3、创建功能包"></a>3、创建功能包</h1><p>1、创建功能包</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;catkin_ws&#x2F;src</span><br><span class="line">$ catkin_create_pkg test_pkg std_msgs rospy roscpp #test_pkg为创建的功能包的名字 test_pkg后面为需要依赖的项</span><br></pre></td></tr></table></figure> 
 
 <p>2、编译功能包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~catkin_ws</span><br><span class="line">$ catkin_make </span><br><span class="line">$ source ~&#x2F;catkin_ws&#x2F;devel&#x2F;setup.bash</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~catkin_ws</span><br><span class="line">$ catkin_make </span><br><span class="line">$ source ~&#x2F;catkin_ws&#x2F;devel&#x2F;setup.bash</span><br></pre></td></tr></table></figure>
 
 
 
@@ -630,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#工作空间"><span class="nav-number">1.</span> <span class="nav-text">工作空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建工作空间"><span class="nav-number">2.</span> <span class="nav-text">创建工作空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建功能包"><span class="nav-number">3.</span> <span class="nav-text">创建功能包</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1、工作空间"><span class="nav-number">1.</span> <span class="nav-text">1、工作空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2、创建工作空间"><span class="nav-number">2.</span> <span class="nav-text">2、创建工作空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、创建功能包"><span class="nav-number">3.</span> <span class="nav-text">3、创建功能包</span></a></li></ol></div>
             
 
           </div>
