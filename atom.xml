@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2020-07-19T22:45:43.274Z</updated>
+  <updated>2020-07-25T23:58:14.887Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RANSAC</title>
+    <link href="http://yoursite.com/child/2020/07/26/RANSAC/"/>
+    <id>http://yoursite.com/child/2020/07/26/RANSAC/</id>
+    <published>2020-07-25T23:54:17.000Z</published>
+    <updated>2020-07-25T23:58:14.887Z</updated>
+    
+    <content type="html"><![CDATA[<p>RANSAC 的基本原理</p><a id="more"></a><h1 id="RANSAC的基本实现过程"><a href="#RANSAC的基本实现过程" class="headerlink" title="RANSAC的基本实现过程"></a>RANSAC的基本实现过程</h1><p>基本思想：RANSAC通过反复选择数据中的一组随机子集来达成目标。被选取的子集被假设为局内点，并用下述方法进行验证：</p><p>1、有一个模型适用于假设的局内点，即所有的未知参数都能从假设的局内点计算得出。<br>2、用1中得到的模型去测试所有的其它数据，如果某个点适用于估计的模型，认为它也是局内点。<br>3、如果有足够多的点被归类为假设的局内点，那么估计的模型就足够合理。<br>4、然后，用所有假设的局内点去重新估计模型，因为它仅仅被初始的假设局内点估计过。<br>5、最后，通过估计局内点与模型的错误率来评估模型。</p><p>如此，重复数次，这个过程被重复执行固定的次数，每次产生的模型要么因为局内点太少而被舍弃，要么因为它比现有的模型更好而被选用。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;RANSAC 的基本原理&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机视觉基础知识储备" scheme="http://yoursite.com/child/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/"/>
+    
+    
+      <category term="计算机视觉基础知识储备" scheme="http://yoursite.com/child/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%82%A8%E5%A4%87/"/>
+    
+  </entry>
   
   <entry>
     <title>SegMap的编译</title>
